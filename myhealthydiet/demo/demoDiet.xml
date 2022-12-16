@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="demoDiet1" model="myhealthydiet.myhealthydiet">
+        <field name="dietName">Vegetarian</field>
+        <field name="description">A diet for those who love vegetables</field>
+        <field name="Calories">1500.0</field>
+        <field name="Proteins">500.0</field>
+        <field name="Lipids">500.0</field>
+        <field name="Goal">INCREASE</field>
+        <field name="Carbohydrates">500.0</field>
+        <field name="Tips">0</field>
+        <field name="Plates">0</field>
+        <field name="Users">0</field>
+        </record>
+    </data>
+</odoo>
