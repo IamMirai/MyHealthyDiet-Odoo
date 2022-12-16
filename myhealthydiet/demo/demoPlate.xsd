@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+    <record id="0" model="myhealthydiet.plate">
+        <field name="plate_id">1</field>
+        <field name="plateName">Albóndigas de pavo con champiñones</field>
+        <field name="mealType">LUNCH</field>
+        <field name="calories">244.0</field>
+        <field name="carbohydrates">26.0</field>
+        <field name="lipids">12.0</field>
+        <field name="proteins">26.0</field>
+        <field name="isVegetarian">0</field>
+    </record>
+    </data>
+</odoo>
