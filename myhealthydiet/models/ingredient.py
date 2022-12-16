@@ -11,3 +11,4 @@ class ingredient(models.Model):
     ("POULTRY", "POULTRY"), ("FISH", "FISH"), ("SEAFOOD", "SEAFOOD"), ("DAIRY", "DAIRY")], required=True, 
     help="Type of food: VEGETABLE, FRUIT, NUT, GRAIN, BEAN, MEAT, POULTRY, FISH, SEAFOOD, DAIRY")
     plates = fields.Many2many('myhealthydiet.plate')
+    isInSeason = fields.boolean(required=True, help="Boolean that shows if it is in season or not")
