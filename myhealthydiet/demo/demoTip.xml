@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <record id="tip1" model="myhealthydiet.tip">
+            
+        </record>
+    </data>
+</odoo>

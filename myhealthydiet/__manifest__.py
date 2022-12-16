@@ -1,17 +1,22 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "myhealthydiet",
+    'name': "MyHealthyDiet Management",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Diets and plates for a good nourishment""",
 
     'description': """
-        Long description of module's purpose
+        This module is made for the purpose of having a good alimentation.
+        You can manage:
+        - Diets
+        - Plates
+        - Ingredients
+        - Tips
+        - Users. 
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "QuickDiets",
+    'website': "",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/10.0/odoo/addons/base/module/module_data.xml
