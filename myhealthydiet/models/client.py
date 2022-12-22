@@ -10,4 +10,4 @@ class client(models.Model):
     goal = fields.Selection([("increase","Increase"),("decrease","Decrease"),("maintain","Maintain")],string="Goal",help="The clients goal: increase, decrease or maintain")
     height = fields.Float(string="Height",required=True,help="The clients current age")
     weights = fields.One2Many("myhealthydiet.weight","user_id",string="Weights")
-    users = fields.Many2Many("myhealthydiet.diet")
+    diets = fields.Many2Many("myhealthydiet.diet")
