@@ -31,9 +31,10 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
-        'views/plateView.xml',        
+        'views/plateView.xml',
+        'views/tipView.xml',
+        'views/dietView.xml',
         'views/templates.xml',
-        'views/dietView.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
