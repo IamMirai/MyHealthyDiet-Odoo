@@ -2,7 +2,6 @@
   <data>
     <!-- Top menu item -->
     <menuitem name="MyHealthyDiet" id="myhealthydiet.menu_root"/>
-    -->
     <!-- menu categories -->
     <menuitem name="MyHealthyDiet Management" id="myhealthydiet.management" parent="myhealthydiet.menu_root"/>
   </data>
