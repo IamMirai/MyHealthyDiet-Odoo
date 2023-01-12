@@ -33,6 +33,7 @@
         'views/views.xml',
         'views/plateView.xml',        
         'views/templates.xml',
+        'views/dietView.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
