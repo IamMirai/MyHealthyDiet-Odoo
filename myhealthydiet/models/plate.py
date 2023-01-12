@@ -2,11 +2,10 @@
 
 from odoo import models, fields
 
-class plate(models.Model):
+class Plate(models.Model):
     _name = 'myhealthydiet.plate'
     
-    plate_id = fields.Integer(required=True, help="Id of the plate")
-    plateName = fields.Char(required=True, help="Name of the plate")
+    name = fields.Char(required=True, help="Name of the plate", string="Plate")
     mealType = fields.Selection([("BREAKFAST", "BREAKFAST"), ("LUNCH", "LUNCH"), ("DINNER", "DINNER")], required=True, 
     help="Type of meal: Breakfast, Lunch, Dinner")
     calories = fields.Float(required=True, help="Calories of the plate")
