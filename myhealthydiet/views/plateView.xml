@@ -1,0 +1,21 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" 
+            id="myhealthydiet.action_plate">
+      <field name="name">Plates</field>
+      <field name="res_model">myhealthydiet.plate</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">Create the first plate</p>
+      </field>
+    </record>
+    
+    <!-- actions -->
+    <menuitem name="Plates Management" 
+              id="myhealthydiet.menu_plate" 
+              parent="myhealthydiet.management"
+              action="myhealthydiet.action_plate"/>
+  </data>
+</odoo>
