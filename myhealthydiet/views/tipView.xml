@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-  <data>
-      <record model="ir.actions.act_window" id="myhealthydiet.action_tip">
-          <field name="name">Tip activity</field>
-          <field name="res_model">myhealthydiet.tip</field>
-          <field name="view_mode">tree,form</field>
-      </record>
+    <data>
+        <record model="ir.actions.act_window" id="myhealthydiet.action_tip">
+            <field name="name">Tip activity</field>
+            <field name="res_model">myhealthydiet.tip</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first plate</p>
+            </field>
+        </record>
       
-      <menuitem name="Tip management"
-                id="myhealthydiet.menu_tip"
-                parent="myhealthydiet.management"
-                action="myhealthydiet.action_tip"/>
+        <menuitem name="Tip management"
+                  id="myhealthydiet.menu_tip"
+                  parent="myhealthydiet.management"
+                  action="myhealthydiet.action_tip"/>
                 
-  </data>
+    </data>
 </odoo>
