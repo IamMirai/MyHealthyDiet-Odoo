@@ -1,0 +1,29 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="myhealthydiet.action_diet">
+      <field name="name">Diets</field>
+      <field name="res_model">myhealthydiet.diet</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">              
+        <p class="oe_view_nocontent_create">
+            Create the first Diet              
+        </p>         
+      </field>
+    </record>
+
+    <!-- menu categories -->
+    <menuitem name="Diets" 
+              id="myhealthydiet.menu_1_diets" 
+              parent="myhealthydiet.management"
+              action="myhealthydiet.action_diet"/>
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="myhealthydiet.menu_1_list" parent="myhealthydiet.menu_1"
+              action="myhealthydiet.action_window"/>
+    <menuitem name="Server to list" id="myhealthydiet" parent="myhealthydiet.menu_2"
+              action="myhealthydiet.action_server"/>
+    -->
+  </data>
+</odoo>
