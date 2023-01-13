@@ -17,6 +17,6 @@ class Diet(models.Model):
     
 #   RELATIONS
     tip_ids = fields.One2many('myhealthydiet.tip', 'diet_id', string="Tips", required=True, help="Tips")
-    plate_ids = fields.Many2many('myhealthydiet.plate', string="Plates", required=True, help="Plates")
+    plate_ids = fields.One2many('myhealthydiet.plate','diet_id', string="Plates", required=True, help="Plates")
     user_ids = fields.Many2many('res.users', string="Users", required=True, help="Users")
     
