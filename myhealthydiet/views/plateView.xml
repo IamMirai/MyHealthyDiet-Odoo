@@ -1,5 +1,62 @@
 <odoo>
   <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="myhealthydiet.list">
+      <field name="name">Plates</field>
+      <field name="model">myhealthydiet.plate</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="mealType"/>
+          <field name="isVegetarian"/>
+          <field name="calories"/>
+          <field name="carbohydrates"/>
+          <field name="lipids"/>
+          <field name="proteins"/>
+          <field name="ingredients"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="myhealthydiet.form">
+      <field name="name">Plates</field>
+      <field name="model">myhealthydiet.plate</field>
+      <field name="arch" type="xml">
+        <form>
+            <group>
+                <group>
+                    <separator string="Plate Information" colspan="2"/>
+                    <field name="name"/>
+                    <field name="mealType"/>
+                    <field name="isVegetarian"/>
+                </group>
+                <group>
+                    <separator string="Nutritional Values" colspan="2"/>
+                    <field name="calories"/>
+                    <field name="carbohydrates"/>
+                    <field name="lipids"/>
+                    <field name="proteins"/>
+                </group>
+                <group colspan="4">
+                    <separator string="Ingredients" colspan="2"/>
+                    <field name="ingredients"/>
+                </group>
+            </group>
+        </form>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="myhealthydiet.search">
+      <field name="name">Plates</field>
+      <field name="model">myhealthydiet.plate</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="mealType"/>
+        </search>
+      </field>
+    </record>
+    
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" 
             id="myhealthydiet.action_plate">

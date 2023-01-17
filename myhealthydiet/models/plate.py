@@ -15,4 +15,4 @@ class Plate(models.Model):
     isVegetarian = fields.Boolean(required=True, help="Defines if the plate is vegetarian or not")
     
     ingredients = fields.Many2many('myhealthydiet.ingredient')
-    diets = fields.Many2many('myhealthydiet.diet')
+    diet_id = fields.Many2one('myhealthydiet.diet', ondelete='set null')
