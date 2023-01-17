@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="windows-1252"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-
-<Ingredient>
-    <ingredient_id> 1 </ingredient_id>
-    <ingredientName> Salchicha </ingredientName>
-    <foodType> VEGETABLE </foodType>
-    <plates> [Plate plate1, Plate plate2, Plate plate3] </plates>
-    <isInSeason> True </isInSeason>
-</Ingredient>
+<?xml version="1.0">
+<odoo>
+    <data>
+    <record id="0" model="myhealthydiet.ingredient">
+        <field name="ingredient_id">1</field>
+        <field name="ingredientName">Salchicha</field>
+        <field name="foodType">VEGETABLE</field>
+        <field name="plates">[Plate plate1, Plate plate2, Plate plate3]</field>
+        <field name="isInSeason">True</field>
+    </record>
+    </data>
+</odoo>
