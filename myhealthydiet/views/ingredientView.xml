@@ -2,7 +2,7 @@
   <data>
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" 
-            id="myhealthydiet.action_plate">
+            id="myhealthydiet.action_ingredient">
       <field name="name">Ingredients</field>
       <field name="res_model">myhealthydiet.ingredient</field>
       <field name="view_type">form</field>
