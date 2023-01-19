@@ -35,6 +35,7 @@
         'views/tipView.xml',
         'views/dietView.xml',
         'views/templates.xml',
+        'views/ingredientView.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
