@@ -11,6 +11,7 @@
             <field name="foodTypeEnum"/>
             <field name="plates"/>
             <field name="isInSeason"/>
+            <field name="waterIndex"/>
         </tree>
       </field>
     </record>
@@ -26,6 +27,7 @@
                     <field name="name"/>
                     <field name="foodTypeEnum"/>
                     <field name="isInSeason"/>
+                    <field name="waterIndex"/>
                 </group>
                 <group>
                     <separator string="Plates"/>

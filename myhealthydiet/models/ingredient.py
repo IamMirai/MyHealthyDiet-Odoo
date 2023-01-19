@@ -12,6 +12,7 @@ class Ingredient(models.Model):
     ("POULTRY", "POULTRY"), ("FISH", "FISH"), ("SEAFOOD", "SEAFOOD"), ("DAIRY", "DAIRY")], required=True, 
     help="Type of food: VEGETABLE, FRUIT, NUT, GRAIN, BEAN, MEAT, POULTRY, FISH, SEAFOOD, DAIRY")
     isInSeason = fields.Boolean(required=True, help="Boolean that shows if it is in season or not")
+    waterIndex = fields.Float(required=True, help="Float that shows the porcentage of water of the ingredient")
     
 #   RELATIONS
     plates = fields.Many2many('myhealthydiet.plate', string="Plates", required=True, help="Plates")
