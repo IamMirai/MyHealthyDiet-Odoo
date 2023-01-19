@@ -31,6 +31,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
+        'views/clientView.xml',
         'views/plateView.xml',
         'views/tipView.xml',
         'views/dietView.xml',
