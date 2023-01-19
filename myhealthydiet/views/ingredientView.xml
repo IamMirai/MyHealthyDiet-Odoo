@@ -7,8 +7,8 @@
       <field name="model">myhealthydiet.ingredient</field>
       <field name="arch" type="xml">
         <tree>
-            <field name="ingredientName"/>
-            <field name="foodType"/>
+            <field name="name"/>
+            <field name="foodTypeEnum"/>
             <field name="plates"/>
             <field name="isInSeason"/>
         </tree>
@@ -23,8 +23,8 @@
             <group>
                 <group>
                     <separator string="Ingredient Information" colspan="2"/>
-                    <field name="ingredientName"/>
-                    <field name="foodType"/>
+                    <field name="name"/>
+                    <field name="foodTypeEnum"/>
                     <field name="isInSeason"/>
                 </group>
                 <group>
@@ -41,8 +41,8 @@
       <field name="model">myhealthydiet.ingredient</field>
       <field name="arch" type="xml">
         <search>
-          <field name="ingredientName"/>
-          <field name="foodType"/>
+          <field name="name"/>
+          <field name="foodTypeEnum"/>
         </search>
       </field>
     </record>

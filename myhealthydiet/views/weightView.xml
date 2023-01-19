@@ -57,7 +57,7 @@
     </record>
     
     <!-- actions -->
-    <menuitem name="Ingredients Management" 
+    <menuitem name="Weights Management" 
               id="myhealthydiet.menu_weight" 
               parent="myhealthydiet.management"
               action="myhealthydiet.action_weight"/>
