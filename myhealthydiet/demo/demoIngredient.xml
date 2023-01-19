@@ -7,6 +7,7 @@
         <field name="foodType">VEGETABLE</field>
         <field name="plates">[Plate plate1, Plate plate2, Plate plate3]</field>
         <field name="isInSeason">True</field>
+        <field name="waterIndex">80.0</field>
     </record>
     </data>
 </odoo>
