@@ -1,29 +1,93 @@
 <odoo>
-  <data>
-    <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" id="myhealthydiet.action_diet">
-      <field name="name">Diets</field>
-      <field name="res_model">myhealthydiet.diet</field>
-      <field name="view_type">form</field>
-      <field name="view_mode">tree,form</field>
-      <field name="help" type="html">              
-        <p class="oe_view_nocontent_create">
-            Create the first Diet              
-        </p>         
-      </field>
-    </record>
+    <data>
+      
+        <record model="ir.ui.view" id="diets_view_tree">
+            <field name="name">Diets Tree</field>
+            <field name="model">myhealthydiet.diet</field>
+            <field name="arch" type="xml">
+                <tree string="Diets list">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="carbohydrates"/>
+                    <field name="calories"/>
+                    <field name="proteins"/>
+                    <field name="lipids"/>
+                    <field name="goalType"/>
+                    <field name="plate_ids"/>
+                    <field name="user_ids"/>
+                    <field name="tip_ids"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="diets_view_form">
+            <field name="name">Diets Form</field>
+            <field name="model">myhealthydiet.diet</field>
+            <field name="arch" type="xml">
+                <form string="Diet list">
+                    <group>
+                        <group>
+                            <separator string="Diet Information" colspan="2"/>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="carbohydrates"/>
+                            <field name="calories"/>
+                            <field name="proteins"/>
+                            <field name="lipids"/>
+                            <field name="goalType"/>
+                        </group>
+                        <group  colspan="2" col="1">
+                            <separator string="Plates in the diet" colspan="2"/>
+                            <field name="plate_ids"/>
+                        </group>
+                        <groud>
+                            <separator string="User diets" colspan="2"/>
+                            <field name="user_ids"/>
+                        </groud>
+                        <group  colspan="2" col="1">
+                            <separator string="Diet tips" colspan="2"/>
+                            <field name="tip_ids"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="diets_view_search">
+            <field name="name">Diets Search</field>
+            <field name="model">myhealthydiet.diet</field>
+            <field name="arch" type="xml">
+                <search string="Diets list">
+                    <field name="name"/>
+                    <field name="goalType"/>
+                </search>
+            </field>
+        </record>
+      
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="myhealthydiet.action_diet">
+            <field name="name">Diets</field>
+            <field name="res_model">myhealthydiet.diet</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">              
+                <p class="oe_view_nocontent_create">
+                    Create the first Diet              
+                </p>         
+            </field>
+        </record>
 
-    <!-- menu categories -->
-    <menuitem name="Diets" 
-              id="myhealthydiet.menu_1_diets" 
-              parent="myhealthydiet.management"
-              action="myhealthydiet.action_diet"/>
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="myhealthydiet.menu_1_list" parent="myhealthydiet.menu_1"
-              action="myhealthydiet.action_window"/>
-    <menuitem name="Server to list" id="myhealthydiet" parent="myhealthydiet.menu_2"
-              action="myhealthydiet.action_server"/>
-    -->
-  </data>
+        <!-- menu categories -->
+        <menuitem name="Diets" 
+                  id="myhealthydiet.menu_1_diets" 
+                  parent="myhealthydiet.management"
+                  action="myhealthydiet.action_diet"/>
+        <!-- actions -->
+        <!--
+        <menuitem name="List" id="myhealthydiet.menu_1_list" parent="myhealthydiet.menu_1"
+                  action="myhealthydiet.action_window"/>
+        <menuitem name="Server to list" id="myhealthydiet" parent="myhealthydiet.menu_2"
+                  action="myhealthydiet.action_server"/>
+        -->
+    </data>
 </odoo>
