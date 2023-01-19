@@ -33,9 +33,10 @@
         'views/views.xml',
         'views/plateView.xml',
         'views/tipView.xml',
+        'views/ingredientView.xml',
+        'views/weightView.xml',
         'views/dietView.xml',
         'views/templates.xml',
-        'views/ingredientView.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

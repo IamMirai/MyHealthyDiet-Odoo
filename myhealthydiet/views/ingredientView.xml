@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
-      <record model="ir.actions.act_window" id="myhealthydiet.action_ingredient">
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="myhealthydiet.list">
+      <field name="name">Ingredients</field>
+      <field name="model">myhealthydiet.ingredient</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="ingredientName"/>
+            <field name="foodType"/>
+            <field name="plates"/>
+            <field name="isInSeason"/>
+        </tree>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="myhealthydiet.form">
+      <field name="name">Ingredients</field>
+      <field name="model">myhealthydiet.ingredient</field>
+      <field name="arch" type="xml">
+        <form>
+            <group>
+                <group>
+                    <separator string="Ingredient Information" colspan="2"/>
+                    <field name="ingredientName"/>
+                    <field name="foodType"/>
+                    <field name="isInSeason"/>
+                </group>
+                <group>
+                    <separator string="Plates"/>
+                    <field name="plates"/>
+                </group>
+            </group>
+        </form>
+      </field>
+    </record>
+    
+    <record model="ir.ui.view" id="myhealthydiet.search">
+      <field name="name">Ingredient</field>
+      <field name="model">myhealthydiet.ingredient</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="ingredientName"/>
+          <field name="foodType"/>
+        </search>
+      </field>
+    </record>
+    
+        
+    <record model="ir.actions.act_window" id="myhealthydiet.action_ingredient">
           <field name="name">Ingredient activity</field>
           <field name="res_model">myhealthydiet.ingredient</field>
           <field name="view_mode">tree,form</field>
