@@ -47,3 +47,4 @@ class Ingredient(models.Model):
     def _check_name(self):
         if len(self.name) > 50:
             raise ValidationError("The name cannot have more than 50 characters")
+
