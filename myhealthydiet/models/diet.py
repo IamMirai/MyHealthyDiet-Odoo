@@ -43,7 +43,7 @@ class Diet(models.Model):
                     'title': "Something bad happened",
                     'message': "Value can not be greater than calories value",
                 }
-            }  
+            }
             
     @api.constrains ('carbohydrates', 'calories', 'proteins', 'lipids')
     def _check_1 (self):
@@ -54,3 +54,8 @@ class Diet(models.Model):
     def _check_2 (self):
         if self.carbohydrates > self.calories or self.proteins > self.calories or self.lipids > self.calories:
             raise ValidationError ("Your record" + " Carbohydrates: " + str(self.carbohydrates) + " or Proteins: " + str(self.proteins) + " or Lipids: " + str(self.lipids) + " can not be greater than " + " Calories: " + str(self.calories))
+        
+    @api.constrains ('name', 'description')
+    def _check_3 (self):
+        if len(self.name) > 50 or len(self.description) > 50:
+            raise ValidationError ("Your record" + " Name: " + str(self.name) + " or Description: " + str(self.description) + " can not be greater than 50 characters")
