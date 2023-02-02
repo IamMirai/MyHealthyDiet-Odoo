@@ -29,12 +29,14 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/security.xml',
+        'security/ir.model.access.csv',
         'views/views.xml',
-        'views/plateView.xml',
-        'views/tipView.xml',
-        'views/dietView.xml',
+        'views/plateView.xml',        
         'views/templates.xml',
+        'views/dietView.xml',
+        'views/ingredientView.xml',
+        'views/weightView.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
