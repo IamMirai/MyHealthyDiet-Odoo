@@ -32,11 +32,13 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/views.xml',
-        'views/plateView.xml',        
-        'views/templates.xml',
-        'views/dietView.xml',
         'views/clientView.xml',
+        'views/plateView.xml',
         'views/tipView.xml',
+        'views/ingredientView.xml',
+        'views/weightView.xml',
+        'views/dietView.xml',
+        'views/templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
