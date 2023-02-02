@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_myhealthydiet_myhealthydiet,myhealthydiet.myhealthydiet,model_myhealthydiet_myhealthydiet,,1,0,0,0
+group_admin_myhealthydiet,myhealthydiet.diet.admin,model_myhealthydiet_diet,group_admin,1,1,1,1
+group_user_myhealthydiet,myhealthydiet.diet.user,model_myhealthydiet_diet,group_user,1,0,0,0
