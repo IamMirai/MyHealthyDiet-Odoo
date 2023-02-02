@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
     <!-- explicit list view definition -->
-    <record model="ir.ui.view" id="myhealthydiet.list">
+    <record model="ir.ui.view" id="ingredient_view_tree">
       <field name="name">Ingredients</field>
       <field name="model">myhealthydiet.ingredient</field>
       <field name="arch" type="xml">
@@ -16,11 +15,11 @@
       </field>
     </record>
     
-    <record model="ir.ui.view" id="myhealthydiet.form">
-      <field name="name">Ingredients</field>
+    <record model="ir.ui.view" id="ingredient_view_form">
+      <field name="name">Ingredients Form</field>
       <field name="model">myhealthydiet.ingredient</field>
       <field name="arch" type="xml">
-        <form>
+        <form name="Ingredient List">
             <group>
                 <group>
                     <separator string="Ingredient Information" colspan="2"/>
@@ -30,7 +29,7 @@
                     <field name="waterIndex"/>
                 </group>
                 <group>
-                    <separator string="Plates"/>
+                    <separator string="Plates" colspan="2"/>
                     <field name="plates"/>
                 </group>
             </group>
@@ -38,11 +37,11 @@
       </field>
     </record>
     
-    <record model="ir.ui.view" id="myhealthydiet.search">
+    <record model="ir.ui.view" id="ingredient_view_search">
       <field name="name">Ingredient</field>
       <field name="model">myhealthydiet.ingredient</field>
       <field name="arch" type="xml">
-        <search>
+        <search string="Ingredient list">
           <field name="name"/>
           <field name="foodTypeEnum"/>
         </search>

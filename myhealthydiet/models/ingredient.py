@@ -7,7 +7,7 @@ class Ingredient(models.Model):
     _name = 'myhealthydiet.ingredient'
     
 #   VARIABLES
-    name = fields.Char(required=True, help="Name of the ingredient", string="Ingredient")
+    name = fields.Char(string="Ingredient", help="Name of the ingredient", required=True)
     foodTypeEnum = fields.Selection([("VEGETABLE", "VEGETABLE"), ("FRUIT", "FRUIT"),
     ("NUT", "NUT"), ("GRAIN", "GRAIN"), ("BEAN", "BEAN"), ("MEAT", "MEAT"),
     ("POULTRY", "POULTRY"), ("FISH", "FISH"), ("SEAFOOD", "SEAFOOD"), ("DAIRY", "DAIRY")], required=True, 
@@ -32,3 +32,19 @@ class Ingredient(models.Model):
     def _check_something(self):
         if self.waterIndex > 100.0 or self.waterIndex < 0.0:
             raise ValidationError("That values are not accepted")
+        
+    #@api.onchange('name')
+    #def _onchange_name(self):
+    #    if len(self.name) > 50:
+    #        return {
+    #            'warning': {
+    #                'title': "Something bad happend",
+    #                'message': "The name cannot have more than 50 characters",
+    #        }
+    #    }
+        
+    @api.constrains('name')
+    def _check_name(self):
+        if len(self.name) > 50:
+            raise ValidationError("The name cannot have more than 50 characters")
+

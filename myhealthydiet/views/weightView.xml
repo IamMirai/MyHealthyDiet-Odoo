@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
     <!-- explicit list view definition -->
-    <record model="ir.ui.view" id="myhealthydiet.list">
+    <record model="ir.ui.view" id="weight_view_tree">
       <field name="name">Weights</field>
       <field name="model">myhealthydiet.weight</field>
       <field name="arch" type="xml">
@@ -14,11 +13,11 @@
       </field>
     </record>
     
-    <record model="ir.ui.view" id="myhealthydiet.form">
+    <record model="ir.ui.view" id="weight_view_form">
       <field name="name">Weights</field>
       <field name="model">myhealthydiet.weight</field>
       <field name="arch" type="xml">
-        <form>
+        <form name="Weight List">
             <group>
                 <group>
                     <separator string="Weight Information" colspan="2"/>
@@ -35,7 +34,7 @@
       </field>
     </record>
     
-    <record model="ir.ui.view" id="myhealthydiet.search">
+    <record model="ir.ui.view" id="weight_view_search">
       <field name="name">Weight</field>
       <field name="model">myhealthydiet.weight</field>
       <field name="arch" type="xml">

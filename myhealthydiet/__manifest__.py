@@ -39,6 +39,9 @@
         'views/weightView.xml',
         'views/dietView.xml',
         'views/templates.xml',
+        'views/dietView.xml',
+        'views/ingredientView.xml',
+        'views/weightView.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
