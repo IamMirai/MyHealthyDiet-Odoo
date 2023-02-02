@@ -22,7 +22,7 @@ class Plate(models.Model):
     
     #VALIDATIONS
     @api.onchange('carbohydrates','calories','proteins','lipids')
-    def _onchange_positive_nutritional_values(self):
+    def _onchange_negative_nutritional_values(self):
         if self.carbohydrates < 0.0 or self.calories < 0.0 or self.proteins < 0.0 or self.lipids < 0.0:
             return{
                 'warning': {
@@ -42,7 +42,7 @@ class Plate(models.Model):
         }
         
     @api.constrains('carbohydrates','calories','proteins','lipids')
-    def _constrains_positive_nutritional_values(self):
+    def _constrains_negative_nutritional_values(self):
         if self.carbohydrates < 0.0 or self.calories < 0.0 or self.proteins < 0.0 or self.lipids < 0.0:
             raise ValidationError("The nutritional values can't be negative.")
         
