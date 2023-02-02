@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_myhealthydiet_myhealthydiet,myhealthydiet.myhealthydiet,model_myhealthydiet_myhealthydiet,,1,0,0,0
+tip_admin,tip admin,model_myhealthydiet_tip,group_admin,1,1,1,1
+tip_user,tip user,model_myhealthydiet_tip,group_user,1,0,0,0
+client_admin,client admin,model_res_users,group_admin,1,1,1,1
+client_user,client user,model_res_users,group_user,1,0,0,0
