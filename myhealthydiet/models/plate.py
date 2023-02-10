@@ -18,7 +18,7 @@ class Plate(models.Model):
     
     #RELATIONS
     ingredients = fields.Many2many('myhealthydiet.ingredient')
-    diet_id = fields.Many2many('myhealthydiet.diet', ondelete='set null')
+    diet_id = fields.Many2one('myhealthydiet.diet', ondelete='set null')
     
     #VALIDATIONS
     @api.onchange('carbohydrates','calories','proteins','lipids')
